@@ -11,40 +11,53 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="div0">
+            <div class="div1">
+            <div id="container">
+                <div id="header">
+                    <div id= "monthDisplay"></div>
 
-        <div id="container">
-            <div id="header">
-                <div id= "monthDisplay"></div>
+                    <div>
+                        <button id="backButton">Zurück</button>
+                        <button id="nextButton">Weiter</button>
+                    </div>
 
-                <div>
-                    <button id="backButton">Zurück</button>
-                    <button id="nextButton">Weiter</button>
                 </div>
 
+                <div id="weekdays">              
+                    <div><span class="hidden-mobile">Montag</span><span class="hidden-desktop">Mo</span></div>
+                    <div><span class="hidden-mobile">Dienstag</span><span class="hidden-desktop">Di</span></div>
+                    <div><span class="hidden-mobile">Mittwoch</span><span class="hidden-desktop">Mi</span></div>
+                    <div><span class="hidden-mobile">Donnerstag</span><span class="hidden-desktop">Do</span></div>
+                    <div><span class="hidden-mobile">Freitag</span><span class="hidden-desktop">Fr</span></div>
+                    <div><span class="hidden-mobile">Samstag</span><span class="hidden-desktop">Sa</span></div>
+                    <div><span class="hidden-mobile">Sonntag</span><span class="hidden-desktop">So</span></div>
+                </div>
+
+                <div id="calendar"></div>
+                </div>
             </div>
 
-            <div id="weekdays">              
-                <div><span class="hidden-mobile">Montag</span><span class="hidden-desktop">Mo</span></div>
-                <div><span class="hidden-mobile">Dienstag</span><span class="hidden-desktop">Di</span></div>
-                <div><span class="hidden-mobile">Mittwoch</span><span class="hidden-desktop">Mi</span></div>
-                <div><span class="hidden-mobile">Donnerstag</span><span class="hidden-desktop">Do</span></div>
-                <div><span class="hidden-mobile">Freitag</span><span class="hidden-desktop">Fr</span></div>
-                <div><span class="hidden-mobile">Samstag</span><span class="hidden-desktop">Sa</span></div>
-                <div><span class="hidden-mobile">Sonntag</span><span class="hidden-desktop">So</span></div>
+            <div class="div3"> 
+            <br>   
+            <u>Termin-Liste :D</u>
+            <div id="date-list"></div>    
+        </div> 
+        </div>  
+            <div class="div2"> 
+               <br>   
+               <u>Termin-Liste :D</u>
+               <div id="date-list"></div>
+            
             </div>
-
-            <div id="calendar"></div>
-           <!--
-            <div id="date-list"></div>
-           --> 
-        </div>
+        
+        
 
         <div id="newEventModal">
             <h2>Neuer Termin</h2>
-            
+                    
             <input class="eventInput" id="eventTitleInput" placeholder="Titel"/>
             <input class="eventInput" id="eventDescriptionInput" placeholder="Notiz"/>
-
             <button id="saveButton">Erstellen</button>
             <button id="cancelButton">Schließen</button>
         </div>
@@ -59,7 +72,6 @@
 
 
         <div id="modalBackDrop"></div>
-
 
         <script src="./script.js"></script>
     </body>

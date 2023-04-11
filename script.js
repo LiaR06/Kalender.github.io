@@ -9,6 +9,18 @@ const backDrop = document.getElementById ('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const eventDescriptionInput = document.getElementById('eventDescriptionInput');
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+//let count= 0;  --Lia
+
+
+/*function appointmentCount(){
+    
+    if (element, dayString) {
+        count= 3
+    } else{
+        count=0
+    }
+    
+}  --Lia keine Sorge ich weiß dass es keinen Sinn macht, wollte das nur als Test nehmen*/
 
 function openModal(date, is_new) {
     clicked = date;
@@ -49,7 +61,7 @@ function load(){
 
     const firstDayOfMonth = new Date(year, month, 1)
     const daysInMonth = new Date(year, month +1, 0).getDate();
-
+    
     const dateString = firstDayOfMonth.toLocaleDateString('en-us', { 
         weekday: 'long',
         year: 'numeric',
@@ -72,16 +84,21 @@ function load(){
         daySquare.classList.add('day');
 
         const dayString = `${month + 1}/${i - paddingDays}/${year}`;
-
+        
+        
+        //let ACount = count(dayString);   --Lia
+        
+        
         if (i > paddingDays) {
             daySquare.appendChild(dayNumber);
             dayNumber.innerHTML = i - paddingDays + `<span id="appointment_amount${i - paddingDays}"></span>`;
+            //dayNumber.innerHTML = i - paddingDays //+ " " + ACount; --Lia
             if(i -paddingDays === day && nav === 0 ){
-                dayNumber.id = 'currentDay';
+                daySquare.id = 'currentDay';
             }
-
+            
             events.forEach(element => {
-                
+                //ACount+=1  --Lia
                 if (element.date === dayString) {
                     const eventDiv = document.createElement('div');
                     eventDiv.classList.add('event');
@@ -105,6 +122,8 @@ function load(){
 
     updateList();
 }
+
+
 
 function closeModal(){ 
     eventTitleInput.classList.remove('error');
@@ -151,6 +170,9 @@ function updateList() {
 function saveEvent(){ 
     if (eventTitleInput.value){
         //const num = clicked.split('/')[1];
+
+        
+
         eventTitleInput.classList.remove('error');
 
         events.push({
@@ -160,6 +182,9 @@ function saveEvent(){
         });
 
         localStorage.setItem('events', JSON.stringify(events));
+        
+        //count+=1; --Lia
+
         //updateAppointmentAmount(num);
         closeModal();
     } else { 
@@ -179,6 +204,9 @@ function updateAppointmentAmount(id) {
 function deleteEvent(){ 
     events = events.filter(e => e.date !== clicked);
     localStorage.setItem('events', JSON.stringify(events));
+
+    //count-=1;  --Lia
+
     closeModal();
 }
 
@@ -186,6 +214,7 @@ function deleteAppointment(appointment){
     console.log(appointment);
     events = events.filter(e => e !== appointment);
     localStorage.setItem('events', JSON.stringify(events));
+    //count-=1;  --Lia
     closeModal();
 }
 
@@ -203,11 +232,13 @@ function initButtons() {
     document.getElementById('saveButton').addEventListener('click', saveEvent);
     document.getElementById('eventTitleInput').addEventListener("keypress", event => {
         if (event.key === 'Enter') {saveEvent()}});
+        
+        document.getElementById('eventDescriptionInput').addEventListener("keypress", event => {
+        if (event.key === 'Enter') {saveEvent()}});
 
     document.getElementById('cancelButton').addEventListener('click', closeModal);
 
-    document.addEventListener("keypress", event => {
-        if (event.key === 'Escape') {console.log(event)}});
+
 
     document.onkeydown = function(evt) {
         evt = evt || window.event;
