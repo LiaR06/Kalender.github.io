@@ -11,6 +11,9 @@ const eventDescriptionInput = document.getElementById('eventDescriptionInput');
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 //let count= 0;  --Lia
 
+// const num = clicked.split('/')[1]; 
+// num === i - paddingDays
+
 
 /*function appointmentCount(){
     
@@ -120,7 +123,7 @@ function load(){
         calendar.appendChild(daySquare);
     }
 
-    updateList();
+    
 }
 
 
@@ -166,12 +169,48 @@ function updateList() {
         
     });
 }
+/*
+function updateList2() {
+    const listcontainer2 = document.getElementById('date-list2');
+
+    events.forEach(el => {
+        const date = document.createElement('div');
+        date.id = 'list_date_' + el.date;
+
+        const heading = document.createElement('p');
+        const description = document.createElement('p');
+
+        let check = document.getElementById('list_date_' + el.date);
+        if (check) {
+            check.appendChild(heading);
+            check.appendChild(description);
+        } else {
+            listcontainer2.appendChild(date);
+            listcontainer2.appendChild(heading);
+            listcontainer2.appendChild(description);
+        }
+        
+        // TODO: Funktion aufrufen wenn events updatet
+        // TODO: heading und description nicht in date schreiben um styling zu ermöglichen
+        
+        date.innerHTML = el.date; 
+        heading.innerHTML = el.title;
+        description.innerHTML = el.description;
+        
+    });
+}*/
 
 function saveEvent(){ 
     if (eventTitleInput.value){
-        //const num = clicked.split('/')[1];
-
-        
+        const num = clicked.split('/')[1]; 
+       /* if(i > paddingDays){ 
+            num === i - paddingDays;
+            console.log(num);
+        }
+        // date von Termin/element muss gleich Date von Tag sein --> count +1
+        // count darf aber auch nur auf den einen Tag zugreifen und nicht auf alle Tage
+        // count=> forEach: Date vom tag herausfinden wie viele elemente mit dem gleichem Tag zu finden sind
+        // count veränderbar --> "let" und nicht "const"*/
 
         eventTitleInput.classList.remove('error');
 
@@ -258,5 +297,7 @@ function initButtons() {
     document.getElementById('closeButton').addEventListener('click', closeModal);
 }
 
-initButtons()
+initButtons();
+updateList();
+//updateList2();
 load();
