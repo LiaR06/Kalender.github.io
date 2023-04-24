@@ -218,6 +218,7 @@ body {
       
     p {
       margin: 0;
+      font-weight: bold;
     }
       
     #eventTitle, #eventDescription {
@@ -256,7 +257,7 @@ body {
 
 .heading {
   font-size: large;
-  font-weight: bold;
+  font-weight: normal;
   color: black;
 }
 
