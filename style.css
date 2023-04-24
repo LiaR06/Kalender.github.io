@@ -233,7 +233,7 @@ body {
 
 .amount_num {
   color: white;
-  background: #053E4C;
+  background: #7c6761;
   border-radius: 50%;
   aspect-ratio: 1;
   display: flex;
@@ -257,7 +257,7 @@ body {
 .heading {
   font-size: large;
   font-weight: bold;
-  color: #053E4C;
+  color: #914c39;
 }
 
 .description {
