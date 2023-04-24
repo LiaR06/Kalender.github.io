@@ -140,9 +140,9 @@ body {
     left: 0px;
     z-index: 10;
     width: 100vw;
-    height: 100vh;
+    height: 300vh;
     position: absolute;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(47, 44, 44, 0.8);;
   }
 
   #weekdays div span {
