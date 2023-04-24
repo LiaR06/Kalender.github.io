@@ -261,7 +261,7 @@ body {
 }
 
 .description {
-  color: #48B5CF;
+  color: #667758;
 }
 
 .dateItem {
@@ -269,5 +269,5 @@ body {
 }
 
 .dateItem:nth-child(even) {
-  background-color: lightyellow;
+  background-color: #F7F0E4;
 }
