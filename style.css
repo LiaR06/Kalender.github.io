@@ -12,29 +12,6 @@ body {
     font-family: 'Comfortaa';
   }
 
-  .div0{ 
-    margin-right: 30px;
-  }
-  .div1 { 
-    align-content: center;
-    width: 42%;
-    /*border: 1px solid black;*/
-    display: block;
-    margin: 0, 
-  }
-
-  .div2{
-    width: 20%;
-    border: 1px solid black;
-    display: block;
-  }
-
-  .div3{
-    width: 42%;
-    border: 1px solid black;
-    display: none;
-  }
-
   button {
     width: 75px;
     cursor: pointer;
@@ -103,8 +80,8 @@ body {
     background-color: #dbb29c;
   }
   .event {
-    font-size: 11px;
-    padding: 3px;
+    font-size: 10px;
+    padding: 2px 8px;
     background-color: #926d62;
     color: white;
     border-radius: 5px;
@@ -129,6 +106,7 @@ body {
     left: calc(50% - 175px);
     position: absolute;
   }
+
   .eventInput {
     padding: 10px;
     width: 100%;
@@ -140,15 +118,19 @@ body {
     box-shadow: 0px 0px 3px #AFB2A1;
     font-family: 'Comfortaa';
   }
+
   .eventInput.error {
     border: 2px solid red;
   }
+
   #cancelButton, #deleteButton {
     background-color: #B26a54;
   }
+
   #saveButton, #closeButton {
     background-color: #89997f;
   }
+
   #eventText {
     font-size: 14px;
   }
@@ -162,12 +144,15 @@ body {
     position: absolute;
     background-color: rgba(0,0,0,0.8);
   }
+
   #weekdays div span {
     text-align: center;
   }
+
   .hidden-mobile {
     display: block;
   }
+
   .hidden-desktop {
     display: none;
   }
@@ -180,6 +165,7 @@ body {
     background: #929c8b;
   }
 
+
   /* Sonntage */
   .day:nth-child(7n) {
     background: #89997f;
@@ -188,31 +174,20 @@ body {
     background: #667758
   }
 
+
+
   /* mobile View */
   @media only screen and (max-width: 600px) {
     .hidden-mobile {
       display: none;
     }
+      
     .hidden-desktop {
       display: block;
     }
+      
     body {
       background-color: #e8ebdf;
-    }
-
-    .div0{
-      width: 100%;
-    }
-    .div1{
-      width: 100%;
-      margin-bottom: 30px;
-    }
-    .div2 {
-      display: none;
-    }
-    .div3 {
-      display: block;
-      width: 100%;
     }
 
     .day {
@@ -221,35 +196,78 @@ body {
       max-height: 4rem;
       overflow: hidden;
     }
+      
     #container {
       width: 100%;
     }
+      
     #weekdays div {
       padding: 0;
       overflow: hidden;
     }
+      
     #newEventModal, #deleteEventModal {
       margin: 0 20px;
       left: 0;
       width: -webkit-fill-available;
     }
+      
     #monthDisplay {
       max-width: 50%;
     }
+      
     p {
       margin: 0;
     }
+      
     #eventTitle, #eventDescription {
       margin: 0 0 1rem 0;
     }
+      
     #calendar {
       grid-template-columns: repeat(7, 13%);
       gap: 1.5%;
     }
   }
 
-  /* List */
 
-  .List__date {
-    color: red;
-  }
+.amount_num {
+  color: white;
+  background: #053E4C;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-small;
+  margin-left: 0.25rem;
+}
+
+.amount_num:empty {
+  background: unset;
+}
+
+.day span {
+  display: flex;
+}
+
+/* List */
+
+.heading {
+  font-size: large;
+  font-weight: bold;
+  color: #053E4C;
+}
+
+.description {
+  color: #48B5CF;
+}
+
+.dateItem {
+  padding: 1rem;
+}
+
+.dateItem:nth-child(even) {
+  background-color: lightyellow;
+}
