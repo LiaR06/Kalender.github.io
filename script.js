@@ -234,6 +234,8 @@ function initButtons() {
 
   document.getElementById('eventTitleInput').addEventListener("keypress", event => {
     if (event.key === 'Enter') { saveEvent() }
+  document.getElementById('eventDescriptionInput').addEventListener("keypress", event => {
+    if (event.key === 'Enter') { saveEvent() }
   });
 
   document.onkeydown = function (evt) {
