@@ -177,16 +177,16 @@ function saveEvent() {
     // Speichert neues Element im Local Storage
     localStorage.setItem('events', JSON.stringify(events));
     closeModal();
-  } else if (!eventTitleInput.value && !eventDescriptionInput.value) {
+  } else if (!eventTitleInput.value /*&& !eventDescriptionInput.value*/) {
     eventTitleInput.classList.add('error');
-    eventDescriptionInput.classList.add('error');
-  } else if (eventTitleInput.value && !eventDescriptionInput.value) {
+    //eventDescriptionInput.classList.add('error');
+  }/* else if (eventTitleInput.value && !eventDescriptionInput.value) {
     eventTitleInput.classList.remove('error');
     eventDescriptionInput.classList.add('error');
   } else if (!eventTitleInput.value && eventDescriptionInput.value) {
     eventDescriptionInput.classList.remove('error');
     eventTitleInput.classList.add('error');
-  }
+  }*/
   updateList();
 }
 
