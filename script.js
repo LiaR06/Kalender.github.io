@@ -179,7 +179,6 @@ function saveEvent() {
     closeModal();
   } else if (!eventTitleInput.value /*&& !eventDescriptionInput.value*/) {
     eventTitleInput.classList.add('error');
-    //eventDescriptionInput.classList.add('error');
   }/* else if (eventTitleInput.value && !eventDescriptionInput.value) {
     eventTitleInput.classList.remove('error');
     eventDescriptionInput.classList.add('error');
@@ -234,6 +233,7 @@ function initButtons() {
 
   document.getElementById('eventTitleInput').addEventListener("keypress", event => {
     if (event.key === 'Enter') { saveEvent() }
+  });
   document.getElementById('eventDescriptionInput').addEventListener("keypress", event => {
     if (event.key === 'Enter') { saveEvent() }
   });
@@ -254,6 +254,6 @@ function initButtons() {
 }
 
 // Initiales ausführen aller nötigen Funktionen
-initButtons();
+initButtons()
 load();
 updateList();
