@@ -254,6 +254,6 @@ function initButtons() {
 }
 
 // Initiales ausführen aller nötigen Funktionen
-initButtons()
+initButtons();
 load();
 updateList();
