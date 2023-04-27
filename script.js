@@ -113,7 +113,7 @@ function load() {
 // Schließt Modal zum Erstellen neuer Termine
 function closeModal() {
   eventTitleInput.classList.remove('error');
-  eventDescriptionInput.classList.remove('error');
+  //eventDescriptionInput.classList.remove('error');
   newEventModal.style.display = 'none';
   deleteEventModal.style.display = 'none';
   backDrop.style.display = 'none';
@@ -165,9 +165,9 @@ function updateList() {
 
 // Speichert einen neuen Termin ab
 function saveEvent() {
-  if (eventTitleInput.value && eventDescriptionInput.value) {
+  if (eventTitleInput.value) {
     eventTitleInput.classList.remove('error');
-    eventDescriptionInput.classList.remove('error');
+    //eventDescriptionInput.classList.remove('error');
 
     events.push({
       date: clicked,
