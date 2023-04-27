@@ -72,11 +72,12 @@ body {
   }
 
 .day.currentDay {
-  background-color: lightyellow;
+  background-color: #e9c6b2;
+  border: 2px solid #c5a290;
 }
 
 .day.currentDay:hover {
-  background-color: yellow;
+  background-color: #dbb29c;
 }
   .event {
     font-size: 10px;
