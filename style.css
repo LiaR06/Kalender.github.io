@@ -73,7 +73,7 @@ body {
   
   .day + #currentDay {
     background-color:#e9c6b2;
-    border: 2px solid #c5a290
+    border: 2px solid #c5a290;
   }
 
   .day + #currentDay:hover{
