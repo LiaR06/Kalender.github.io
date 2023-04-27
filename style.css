@@ -72,7 +72,7 @@ body {
   }
 
 .day.currentDay {
-  background-color: yellow;
+  background-color: #e9c6b2;
   border: 2px solid #c5a290;
 }
 
