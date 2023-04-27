@@ -71,12 +71,12 @@ body {
     background-color: #efe2ca;
   }
   
-  .day + #currentDay {
+  .day.currentDay {
     background-color:#e9c6b2;
     border: 2px solid #c5a290;
   }
 
-  .day + #currentDay:hover{
+  .day.currentDay:hover{
     background-color: #dbb29c;
   }
   .event {
