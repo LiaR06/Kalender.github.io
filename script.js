@@ -11,6 +11,7 @@ const eventTitleInput = document.getElementById('eventTitleInput');
 const eventDescriptionInput = document.getElementById('eventDescriptionInput');
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+console.log('hallo');
 // Macht Modal sichtbar
 function openModal(date) {
   clicked = date;
@@ -115,8 +116,7 @@ function load() {
 
 const initSearchListener = () =>{ 
 document.getElementById('search-input').addEventListener('keyup', (e) =>{
-  console.log(e.target.value);
-  console.log('hallo');
+ 
 })
 }
 
