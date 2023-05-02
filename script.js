@@ -112,12 +112,7 @@ function load() {
   
 }
 
-function initSearchListener(){ 
-document.getElementById('search-input').addEventListener('keyup', (e) =>{
-console.log('die Funktion funktioniert :D');
-})
-}
-
+ 
 // Schließt Modal zum Erstellen neuer Termine
 function closeModal() {
   eventTitleInput.classList.remove('error');
@@ -168,8 +163,20 @@ function updateList() {
     heading.innerHTML = el.title;
     description.innerHTML = el.description;
 
+   //initSearchListener();
   });
 }
+/*
+const filterTodos = (searchStr) =>{
+  console.log(dateItem.filter(heading => heading.includes(searchStr)));
+}
+function initSearchListener(){ 
+  document.getElementById('search-input').addEventListener('keyup', (e) =>{
+  filterTodos(e.target.value);
+  })
+  }
+*/
+
 
 // Speichert einen neuen Termin ab
 function saveEvent() {
