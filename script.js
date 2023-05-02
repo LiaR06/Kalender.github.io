@@ -112,7 +112,7 @@ function load() {
   
 }
 
-func initSearchListener(){ 
+function initSearchListener(){ 
 document.getElementById('search-input').addEventListener('keyup', (e) =>{
 console.log('die Funktion funktioniert :D');
 })
