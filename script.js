@@ -95,6 +95,7 @@ function load() {
           });
           daySquare.appendChild(eventDiv);
         }
+    
       });
 
       // Setzt EventListener zum Öffnen des Modals zum Erstellen neuer Termine
@@ -108,6 +109,14 @@ function load() {
   }
   // Updated alle Terminzähler
   updateAppointmentAmount();
+  
+  initSearchListener();
+}
+
+const initSearchListener = () =>{ 
+document.getElementById('search-input').addEventListener('keyup', (e) =>{
+  console.log(e.target.value);
+})
 }
 
 // Schließt Modal zum Erstellen neuer Termine
