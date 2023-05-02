@@ -116,6 +116,7 @@ function load() {
 const initSearchListener = () =>{ 
 document.getElementById('search-input').addEventListener('keyup', (e) =>{
   console.log(e.target.value);
+  console.log('hallo');
 })
 }
 
